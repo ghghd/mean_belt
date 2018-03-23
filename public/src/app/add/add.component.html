@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="header">
+    <h3>Know of a pet needing a home?</h3>
+  </div>
+  <div>
+    <span>The pet must have a name</span>
+    <form (submit)="onSubmit()" #myForm="ngForm">
+      <p>Pet Name:</p>
+      <input type="text" name="name" [(ngModel)]="newPet.name"/>
+      <p>Pet type:</p>
+      <input type="text" name="type" [(ngModel)]="newPet.type"/>
+      <p>Description:</p>
+      <input type="text" name="description" [(ngModel)]="newPet.description"/> <br>
+      <p>Skills:</p>
+      <label class='skill' for="">Skill 1:</label>
+      <input type="text" name="skill1" [(ngModel)]="newPet.skill1"/> <br>
+      <label class='skill' for="">Skill 2:</label>
+      <input type="text" name="skill2" [(ngModel)]="newPet.skill2"/> <br>
+      <label class='skill' for="">Skill 3:</label>
+      <input type="text" name="skill3" [(ngModel)]="newPet.skill3"/> <br>
+      <input class="add" type="submit" value="Add Pet"/>
+      <button class="add" (click)="cancel()">Cancel</button>
+      <p *ngIf="errors" style="color: red;">{{errors.description.message}}</p>
+      <p *ngIf="errors" style="color: red;">{{errors.name.message}}</p>
+      <p *ngIf="errors" style="color: red;">{{errors.type.message}}</p>
+    </form>
+  </div>
+</body>
+</html>

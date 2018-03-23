@@ -1,0 +1,32 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 2px 2px darkgray;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 100px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.details{
+    background-color: rgb(161, 185, 230);
+    box-shadow: 1px 1px black;
+    margin-right: 10px;
+    border-radius: 2px 2px;
+}
+.edit{
+    background-color:rgb(196, 187, 187);
+    box-shadow: 1px 1px black;
+    margin-right: 10px;
+    border-radius: 2px 2px;
+}
+a{
+    color: blue;
+}

@@ -1,0 +1,24 @@
+h4{
+    margin-left: 400px;
+    margin-top: 0px;
+}
+p{
+    font-weight: bold;
+}
+span{
+    font-weight: 100;
+    margin-left: 40px;
+}
+.cancel{
+    background-color: rgb(139, 163, 172);
+    border-radius: 5px 5px;
+    height: 40px;
+    width: 80px;
+    margin-right: 10px;
+}
+.delete{
+    background-color: gray;
+    border-radius: 5px 5px;
+    height: 40px;
+    width: 80px;
+}

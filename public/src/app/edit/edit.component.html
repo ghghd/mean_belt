@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Edit this pet</h3>
+  <div *ngFor="let pet of pets">
+    <form (submit)="onSubmit(pet._id)" #myForm="ngForm">
+      <p>Pet Name:</p>
+      <input type="text" name="name" [(ngModel)]="pets[0].name" #name='ngModel' required minlength="3"/>
+      <h6 *ngIf="name.errors">Name must be 3 characters</h6>
+      <p>Pet type:</p>
+      <input type="text" name="type" [(ngModel)]="pets[0].type" #type='ngModel' required minlength="3"/>
+      <h6 *ngIf="type.errors">Type must be 3 characters</h6>
+      <p>Description:</p>
+      <input type="text" name="description" [(ngModel)]="pets[0].description" #description='ngModel' required minlength="3"/> <br>
+      <h6 *ngIf="description.errors">Description must be 3 characters</h6>
+      <p>Skills(optional):</p>
+      <label class='skill' for="">Skill 1:</label>
+      <input type="text" name="skill1" [(ngModel)]="pets[0].skill1"/> <br>
+      <label class='skill 'for="">Skill 2:</label>
+      <input type="text" name="skill2" [(ngModel)]="pets[0].skill2"/> <br>
+      <label class='skill' for="">Skill 3:</label>
+      <input type="text" name="skill3" [(ngModel)]="pets[0].skill3"/> <br>
+      <input class="add" [disabled]=!myForm.form.valid type="submit" value="Edit Pet"/>
+      <button class="add" (click)="cancel()">Cancel</button>
+      <p *ngIf="errors" style="color: red;">{{errors.description.message}}</p>
+      <p *ngIf="errors" style="color: red;">{{errors.title.message}}</p>
+    </form>
+  </div>
+</body>
+</html>

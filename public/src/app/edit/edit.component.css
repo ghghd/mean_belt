@@ -1,0 +1,16 @@
+h6{
+    color: red;
+}
+input{
+    margin-bottom: 5px;
+}
+.skill{
+    margin-left: 50px;
+}
+.add{
+    background-color: rgb(17, 125, 226);
+    height: 50px;
+    width: 100px;
+    border-radius: 5px 5px;
+    margin-left: 30px;
+}
